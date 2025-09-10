@@ -13,7 +13,7 @@ const {restrictToLoggedinUserOnly,verifyAuth, checkForAuthorization,restrictTo}=
 const app=express();
 const port =8001;
 
-connectToDb('mongodb://localhost:27017/short-url').then(()=> console.log("Connected To Database Sir")).catch((err)=> console.log("error",err));
+connectToDb(process.env.MONGODB ??'mongodb://localhost:27017/short-url').then(()=> console.log("Connected To Database Sir")).catch((err)=> console.log("error",err));
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 app.use(cookieParser());
