@@ -39,17 +39,15 @@ This will install all required packages listed in `package.json`:
 Create a `.env` file in the root directory with the following variables:
 
 ```env
-PORT=8000
-MONGODB_URI=mongodb://localhost:27017/url-shortener
-JWT_SECRET=your_secret_key_here
+PORT=8001
+MONGODB=mongodb://localhost:27017/short-url
 ```
 
 **Note**: Replace the values with your own:
-- `PORT`: The port number where the server will run (default: 8000)
-- `MONGODB_URI`: Your MongoDB connection string
-  - For local MongoDB: `mongodb://localhost:27017/url-shortener`
-  - For MongoDB Atlas: `mongodb+srv://username:password@cluster.mongodb.net/url-shortener`
-- `JWT_SECRET`: A secure random string for JWT token signing
+- `PORT`: The port number where the server will run (default: 8001)
+- `MONGODB`: Your MongoDB connection string
+  - For local MongoDB: `mongodb://localhost:27017/short-url`
+  - For MongoDB Atlas: `mongodb+srv://username:password@cluster.mongodb.net/short-url`
 
 ### 4. Start MongoDB
 
@@ -78,11 +76,11 @@ Start the development server with nodemon:
 npm start
 ```
 
-The application will start on `http://localhost:8000` (or the port you specified in `.env`).
+The application will start on `http://localhost:8001` (or the port you specified in `.env`).
 
 ## Accessing the Application
 
-1. Open your browser and navigate to `http://localhost:8000`
+1. Open your browser and navigate to `http://localhost:8001`
 2. You'll see the login page
 3. Click on "Sign Up" to create a new account
 4. After signing up, log in with your credentials
@@ -100,18 +98,15 @@ To test admin features, you'll need to manually set a user's role to "ADMIN" in 
 ## Troubleshooting
 
 ### Port Already in Use
-If port 8000 is already in use, change the `PORT` in your `.env` file to a different port number.
+If port 8001 is already in use, change the `PORT` in your `.env` file to a different port number.
 
 ### MongoDB Connection Error
 - Ensure MongoDB is running
-- Check your `MONGODB_URI` is correct
+- Check your `MONGODB` connection string is correct
 - Verify network connectivity if using MongoDB Atlas
 
 ### Module Not Found Error
 Run `npm install` again to ensure all dependencies are installed.
-
-### JWT Error
-Ensure your `JWT_SECRET` is set in the `.env` file.
 
 ## Project Scripts
 

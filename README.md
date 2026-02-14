@@ -46,8 +46,12 @@ A full-stack URL shortener application built with **Node.js**, **Express**, **Mo
    Create a `.env` file:
    ```env
    PORT=8001
-   MONGODB_URI=mongodb://localhost:27017/short-url
-   JWT_SECRET=your_secret_key_here
+   MONGODB=mongodb://localhost:27017/short-url
+   ```
+   
+   For MongoDB Atlas, use:
+   ```env
+   MONGODB=mongodb+srv://username:password@cluster.mongodb.net/short-url
    ```
 
 4. **Start MongoDB**
@@ -226,7 +230,6 @@ lsof -ti:8001 | xargs kill -9
 - Check your connection string in `.env`
 
 **JWT errors**
-- Verify `JWT_SECRET` is set in `.env`
 - Clear browser cookies and login again
 
 ---
