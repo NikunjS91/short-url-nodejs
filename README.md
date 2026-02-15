@@ -51,7 +51,7 @@ A full-stack URL shortener application built with **Node.js**, **Express**, **Mo
    
    For MongoDB Atlas, use:
    ```env
-   MONGODB=mongodb+srv://username:password@cluster.mongodb.net/short-url
+   MONGODB=mongodb+srv://<username>:<password>@<cluster>.mongodb.net/short-url
    ```
 
 4. **Start MongoDB**

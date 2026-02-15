@@ -47,7 +47,7 @@ MONGODB=mongodb://localhost:27017/short-url
 - `PORT`: The port number where the server will run (default: 8001)
 - `MONGODB`: Your MongoDB connection string
   - For local MongoDB: `mongodb://localhost:27017/short-url`
-  - For MongoDB Atlas: `mongodb+srv://username:password@cluster.mongodb.net/short-url`
+  - For MongoDB Atlas: `mongodb+srv://<username>:<password>@<cluster>.mongodb.net/short-url`
 
 ### 4. Start MongoDB
 
